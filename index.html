@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -100,6 +101,7 @@
         .produk-container {
             display: flex;
             justify-content: center;
+            align-items: flex-start;
             gap: 20px;
             flex-wrap: wrap;
         }
@@ -129,6 +131,51 @@
             color: #008000;
             font-weight: bold;
             font-size: 20px;
+        }
+
+        .pesan {
+            display: inline-block;
+            background-color: #008000;
+            color: white;
+            text-decoration: none;
+            padding: 10px 18px;
+            border-radius: 8px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .pesan:hover {
+            background-color: #006400;
+        }
+
+        /* PRODUK TAMBAHAN */
+        #produk-lainnya {
+            width: 100%;
+            display: none;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        /* TOMBOL READ MORE */
+        #readMore {
+            display: block;
+            margin: 30px auto 0;
+            padding: 13px 30px;
+            background-color: #008000;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        #readMore:hover {
+            background-color: #006400;
+            transform: scale(1.05);
         }
 
         #tentang {
@@ -169,20 +216,11 @@
             font-weight: bold;
             margin-top: 15px;
         }
-	.pesan {
-   	   display: inline-block;
- 	   background-color: #008000;
-  	   color: white;
- 	   text-decoration: none;
-   	   padding: 10px 18px;
-  	   border-radius: 8px;
-  	   font-weight: bold;
- 	   margin-top: 10px;
-	}
 
-	.pesan:hover {
-  	  background-color: #006400;
-	}
+        .whatsapp:hover {
+            background-color: #1ebe5d;
+        }
+
         footer {
             background-color: #006400;
             color: white;
@@ -191,6 +229,7 @@
         }
 
         @media (max-width: 600px) {
+
             header h1 {
                 font-size: 28px;
             }
@@ -202,6 +241,11 @@
 
             .produk {
                 width: 90%;
+                max-width: 300px;
+            }
+
+            #produk-lainnya {
+                width: 100%;
             }
         }
     </style>
@@ -209,11 +253,13 @@
 
 <body>
 
+    <!-- HEADER -->
     <header>
         <h1>Toko Berkah Selalu</h1>
         <p>Berbagai kebutuhan rumah tangga untuk keluarga Anda</p>
     </header>
 
+    <!-- NAVIGASI -->
     <nav>
         <a href="#beranda">Beranda</a>
         <a href="#produk">Produk</a>
@@ -221,6 +267,7 @@
         <a href="#kontak">Kontak</a>
     </nav>
 
+    <!-- BERANDA -->
     <section id="beranda">
         <h2>Selamat Datang di Toko Berkah Selalu</h2>
 
@@ -233,70 +280,124 @@
         </a>
     </section>
 
+    <!-- PRODUK -->
     <section id="produk">
+
         <h2>Produk Kami</h2>
 
         <div class="produk-container">
 
+            <!-- PRODUK 1 -->
             <div class="produk">
                 <div class="gambar">🍚</div>
+
                 <h3>Beras</h3>
-                <p>Beras berkualitas untuk kebutuhan keluarga.</p>
-                <div class="harga">Rp 75.000</div>
-		<a
-   			 class="pesan"
-   			 href="https://api.whatsapp.com/send?phone=6285839030390&text=Halo%20Toko%20Berkah%20Selalu%2C%20saya%20ingin%20memesan%20Beras."
-   			 target="_blank">
-  			  🛒 Pesan Sekarang
-		</a>
+
+                <p>
+                    Beras berkualitas untuk kebutuhan keluarga.
+                </p>
+
+                <div class="harga">
+                    Rp 75.000
+                </div>
+
+                <a
+                    class="pesan"
+                    href="https://api.whatsapp.com/send?phone=6285839030390&text=Halo%20Toko%20Berkah%20Selalu%2C%20saya%20ingin%20memesan%20Beras."
+                    target="_blank">
+                    🛒 Pesan Sekarang
+                </a>
             </div>
 
+            <!-- PRODUK 2 -->
             <div class="produk">
                 <div class="gambar">🛢️</div>
+
                 <h3>Minyak Goreng</h3>
-                <p>Minyak goreng untuk kebutuhan memasak.</p>
-                <div class="harga">Rp 18.000</div>
-		<a
-   			 class="pesan"
-   			 href="https://api.whatsapp.com/send?phone=6285839030390&text=Halo%20Toko%20Berkah%20Selalu%2C%20saya%20ingin%20memesan%20Beras."
-   			 target="_blank">
-  			  🛒 Pesan Sekarang
-		</a>
+
+                <p>
+                    Minyak goreng untuk kebutuhan memasak.
+                </p>
+
+                <div class="harga">
+                    Rp 18.000
+                </div>
+
+                <a
+                    class="pesan"
+                    href="https://api.whatsapp.com/send?phone=6285839030390&text=Halo%20Toko%20Berkah%20Selalu%2C%20saya%20ingin%20memesan%20Minyak%20Goreng."
+                    target="_blank">
+                    🛒 Pesan Sekarang
+                </a>
             </div>
 
-            <div class="produk">
-                <div class="gambar">🧼</div>
-                <h3>Sabun</h3>
-                <p>Berbagai kebutuhan sabun rumah tangga.</p>
-                <div class="harga">Rp 5.000</div>
-		<a
-   			 class="pesan"
-   			 href="https://api.whatsapp.com/send?phone=6285839030390&text=Halo%20Toko%20Berkah%20Selalu%2C%20saya%20ingin%20memesan%20Beras."
-   			 target="_blank">
-  			  🛒 Pesan Sekarang
-		</a>
-            </div>
+            <!-- PRODUK TAMBAHAN -->
+            <div id="produk-lainnya">
 
-	   <div class="produk">
-                <div class="gambar">🧼</div>
-                <h3>Shampo</h3>
-                <p>Berbagai kebutuhan shampo rumah tangga.</p>
-                <div class="harga">Rp 12.000</div>
-		<a
-   			 class="pesan"
-   			 href="https://api.whatsapp.com/send?phone=6285839030390&text=Halo%20Toko%20Berkah%20Selalu%2C%20saya%20ingin%20memesan%20Beras."
-   			 target="_blank">
-  			  🛒 Pesan Sekarang
-		</a>
+                <!-- SABUN -->
+                <div class="produk">
+                    <div class="gambar">🧼</div>
+
+                    <h3>Sabun</h3>
+
+                    <p>
+                        Berbagai kebutuhan sabun rumah tangga.
+                    </p>
+
+                    <div class="harga">
+                        Rp 5.000
+                    </div>
+
+                    <a
+                        class="pesan"
+                        href="https://api.whatsapp.com/send?phone=6285839030390&text=Halo%20Toko%20Berkah%20Selalu%2C%20saya%20ingin%20memesan%20Sabun."
+                        target="_blank">
+                        🛒 Pesan Sekarang
+                    </a>
+                </div>
+
+                <!-- SHAMPO -->
+                <div class="produk">
+                    <div class="gambar">🧴</div>
+
+                    <h3>Shampo</h3>
+
+                    <p>
+                        Berbagai kebutuhan shampo rumah tangga.
+                    </p>
+
+                    <div class="harga">
+                        Rp 12.000
+                    </div>
+
+                    <a
+                        class="pesan"
+                        href="https://api.whatsapp.com/send?phone=6285839030390&text=Halo%20Toko%20Berkah%20Selalu%2C%20saya%20ingin%20memesan%20Shampo."
+                        target="_blank">
+                        🛒 Pesan Sekarang
+                    </a>
+                </div>
+
             </div>
 
         </div>
+
+        <!-- READ MORE -->
+        <button
+            onclick="tampilkanProduk()"
+            id="readMore">
+            READ MORE
+        </button>
+
     </section>
 
+    <!-- TENTANG KAMI -->
     <section id="tentang">
+
         <h2>Tentang Kami</h2>
 
         <div class="kotak">
+
             <p>
                 <strong>Toko Berkah Selalu</strong> menyediakan berbagai
                 kebutuhan sehari-hari untuk keluarga dengan pelayanan
@@ -307,10 +408,14 @@
                 Kami berusaha memberikan kemudahan bagi pelanggan
                 dalam mendapatkan kebutuhan rumah tangga.
             </p>
+
         </div>
+
     </section>
 
+    <!-- KONTAK -->
     <section id="kontak">
+
         <h2>Kontak & Informasi</h2>
 
         <div class="kontak-box">
@@ -338,12 +443,32 @@
             </a>
 
         </div>
+
     </section>
 
+    <!-- FOOTER -->
     <footer>
-        <p>© 2026 Toko Berkah Selalu</p>
-        <p>Semoga berkah dan selalu melayani dengan sepenuh hati.</p>
+
+        <p>
+            © 2026 Toko Berkah Selalu
+        </p>
+
+        <p>
+            Semoga berkah dan selalu melayani dengan sepenuh hati.
+        </p>
+
     </footer>
+
+    <!-- JAVASCRIPT READ MORE -->
+    <script>
+        function tampilkanProduk() {
+
+            document.getElementById("produk-lainnya").style.display = "flex";
+
+            document.getElementById("readMore").style.display = "none";
+        }
+    </script>
 
 </body>
 </html>
+```
